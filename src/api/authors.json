@@ -1,0 +1,5 @@
+[
+  {"id": 1, "name": "Pushkin", "poems":[{"id":1,"title":"Evgeny Onegin","date":1825}]},
+  {"id": 2, "name": "Lermontov", "poems":[{"id":1,"title":"The Sail","date":1832}]},
+  {"id": 3, "name": "Yesenin", "poems":[{"id":1,"title":"Oh my dear maple, frozen stiff and bare","date":1916}]}
+]
