@@ -1,3 +1,14 @@
+# HOW TO INSTALL
+1. npm i (console command)
+2. it depends on your environment
+   * PRODUCTION:
+   a) npm run build (console command)
+   b) open index.html in a browser through your static server  
+   * DEV:
+   a) in index.html to change `<script src="dist/bundle.js"></script>` on `<script src="/static/bundle.js"></script>`
+   b) node devServer.js (console command)
+
+
 # Introduction
 
 I'll try to show you my approach in development by redux way.

@@ -1,1 +1,2 @@
 export const RECEIVE_AUTHORS = 'RECEIVE_AUTHORS';
+export const RECEIVE_AUTHOR = 'RECEIVE_AUTHOR';

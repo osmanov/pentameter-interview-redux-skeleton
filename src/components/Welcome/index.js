@@ -15,11 +15,11 @@ export default class Welcome extends React.Component {
         let {history,path} = this.props;
         return (
             <div>
-                <div className={styles.root}>
-                    <div className={styles.title}>
+                <div className="jumbotron">
+                    <div className="container">
                         <h1>pentameter</h1>
                         <p>A better way to discover poetry online.</p>
-                        <button onClick={this.navigate(history, path)}>Select author,read and enjoy</button>
+                        <p><a onClick={this.navigate(history, path)} className="btn btn-primary btn-lg" href="#" role="button">Select author,read and enjoy</a></p>
                     </div>
                 </div>
             </div>);

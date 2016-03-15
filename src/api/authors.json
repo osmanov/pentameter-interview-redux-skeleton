@@ -1,5 +1,5 @@
 [
-  {"id": 1, "name": "Pushkin", "poems":[{"id":1,"title":"Evgeny Onegin","date":1825}]},
-  {"id": 2, "name": "Lermontov", "poems":[{"id":1,"title":"The Sail","date":1832}]},
+  {"id": 1, "name": "Pushkin", "poems":[{"id":1,"title":"Evgeny Onegin","date":1825},{"id":2,"title":"The Cloud","date":1835},{"id":3,"title":"Karamzin","date":1818}]},
+  {"id": 2, "name": "Lermontov", "poems":[{"id":1,"title":"The Sail","date":1832},{"id":2,"title":"Loneliness","date":1830}]},
   {"id": 3, "name": "Yesenin", "poems":[{"id":1,"title":"Oh my dear maple, frozen stiff and bare","date":1916}]}
 ]
