@@ -8,7 +8,7 @@ I would like to demonstrate my `redux-app-skeleton` by example.
 >it's just a logic for a draft app ,but I hope that it'll be enough for understanding how I work with `redux`
 >and why I choose this structure.
 
-# WHERE IS RESULT?
+# RESULT?
 [CHECK IT](http://osmanov.github.io)
 
 # HOW TO INSTALL
