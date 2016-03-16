@@ -1,11 +1,16 @@
+# WHERE IS RESULT?
+[CHECK IT](http://osmanov.github.io)
+
 # HOW TO INSTALL
 1. npm i (console command)
 2. it depends on your environment
-   * PRODUCTION:
-   a) npm run build (console command)
-   b) open index.html in a browser through your static server  
-   * DEV:
-   a) in index.html to change `<script src="dist/bundle.js"></script>` on `<script src="/static/bundle.js"></script>`
+   * PRODUCTION: <br /> 
+   a) npm run build (console command) <br /> 
+   b) open index.html in a browser through your static server   <br /> 
+   * DEV: <br /> 
+   a) in index.html to change <br />
+`<script src="dist/bundle.js"></script>`  on
+    `<script src="/static/bundle.js"></script>`  <br /> 
    b) node devServer.js (console command)
 
 
@@ -14,8 +19,8 @@
 I'll try to show you my approach in development by redux way.
 I guess it's pretty boring to check just a folder structure,so 
 I would like to demonstrate my `redux-app-skeleton` by example.
->This example is a poor,I didn't run it through a console and check a result in a browser or wherever,
->it's just a logic for a draft app that I was writing in my editor,but I hope that it'll enough for understanding how I work with it
+>This example is a poor,
+>it's just a logic for a draft app ,but I hope that it'll be enough for understanding how I work with `redux`
 >and why I choose this structure.
 
      
