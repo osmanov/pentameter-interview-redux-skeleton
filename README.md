@@ -1,3 +1,13 @@
+
+# Introduction
+
+I'll try to show you my approach in development by redux way.
+I guess it's pretty boring to check just a folder structure,so 
+I would like to demonstrate my `redux-app-skeleton` by example.
+>This example is a poor,
+>it's just a logic for a draft app ,but I hope that it'll be enough for understanding how I work with `redux`
+>and why I choose this structure.
+
 # WHERE IS RESULT?
 [CHECK IT](http://osmanov.github.io)
 
@@ -13,15 +23,6 @@
     `<script src="/static/bundle.js"></script>`  <br /> 
    b) node devServer.js (console command)
 
-
-# Introduction
-
-I'll try to show you my approach in development by redux way.
-I guess it's pretty boring to check just a folder structure,so 
-I would like to demonstrate my `redux-app-skeleton` by example.
->This example is a poor,
->it's just a logic for a draft app ,but I hope that it'll be enough for understanding how I work with `redux`
->and why I choose this structure.
 
      
 # Specification
