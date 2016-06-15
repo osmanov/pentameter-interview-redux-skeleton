@@ -18,7 +18,7 @@ I would like to demonstrate my `redux-app-skeleton` by example.
    a) npm run build <br /> 
    b) open index.html in a browser through your static server   <br /> 
    * DEV: <br /> 
-   node devServer.js 
+   node devServer.js and after that- open `http://localhost:3000` 
 
 
      
