@@ -12,16 +12,13 @@ I would like to demonstrate my `redux-app-skeleton` by example.
 [CHECK IT](http://osmanov.github.io)
 
 # HOW TO INSTALL
-1. npm i (console command)
+1. npm i 
 2. it depends on your environment
    * PRODUCTION: <br /> 
-   a) npm run build (console command) <br /> 
+   a) npm run build <br /> 
    b) open index.html in a browser through your static server   <br /> 
    * DEV: <br /> 
-   a) in index.html to change <br />
-`<script src="dist/bundle.js"></script>`  on
-    `<script src="/static/bundle.js"></script>`  <br /> 
-   b) node devServer.js (console command)
+   node devServer.js 
 
 
      
