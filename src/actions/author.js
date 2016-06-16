@@ -12,11 +12,17 @@ function receiveAuthor(author) {
     }
 }
 
+export function loadAuthor(){
+    return dispatch => {
+        return {
+            type: LOADING_STATUS
+        }
+    }
+}
+
 export function fetchAuthor(id) {
     return dispatch => {
-        dispatch({
-            type: LOADING_STATUS
-        });
+        loadAuthor();
 
         booksLibrary.getAuthorById(id,author => {
             dispatch(receiveAuthor(author))
