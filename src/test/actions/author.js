@@ -17,10 +17,37 @@ test('#loadAuthor', t => {
 });
 
 
-test('#fetchAuthor', t => {
+test('#fetchAuthor',async t => {
+  const receiveAuthorExpected = await booksLibrary.getAuthorById(1);
+  const expectedActions = [
+    {type: statusTypes.LOADING_STATUS},
+    {type: types.RECEIVE_AUTHOR, author:receiveAuthorExpected}
+  ];
+
   const store = mockStore({});
-  return booksLibrary.getAuthorById(1).then((author)=> {
-    const expectedActions = {type: types.RECEIVE_AUTHOR, author};
-    t.deepEqual(store.dispatch(authorActions.receiveAuthor(author)), expectedActions);
+
+
+
+  /*return store.dispatch(authorActions.fetchAuthor(1)).then(()=>{
+    console.log(store.getActions())
+  });*/
+
+  return store.dispatch(authorActions.fetchAuthor(1)).then((author)=>{
+    t.deepEqual(store.getActions(), expectedActions)
+    //  console.log(author);
+   // t.deepEqual(store.getActions(), expectedActions)
   });
+
+  /*return booksLibrary.getAuthorById(1).then((author)=> {
+    //const expectedActions = {type: types.RECEIVE_AUTHOR, author};
+    const expectedActions = [
+      {type: statusTypes.LOADING_STATUS},
+      {type: types.RECEIVE_AUTHOR, author}
+    ];
+    return store.dispatch(authorActions.fetchAuthor(1)).then(()=>{
+    //  console.log(store.getActions());
+      t.deepEqual(store.getActions(), expectedActions)
+    });
+
+  });*/
 });

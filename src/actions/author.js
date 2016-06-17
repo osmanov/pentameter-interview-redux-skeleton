@@ -21,6 +21,6 @@ export function loadAuthor() {
 export function fetchAuthor(id) {
   return dispatch => {
     dispatch(loadAuthor());
-    booksLibrary.getAuthorById(id).then((author)=>dispatch(receiveAuthor(author)))
+    return booksLibrary.getAuthorById(id).then((author)=>dispatch(receiveAuthor(author)))
   }
 }
