@@ -5,14 +5,14 @@ import {
 import * as types from '../constants/actionTypes';
 import booksLibrary from '../api/booksLibrary.js';
 
-export function receiveAuthor(author) {
+function receiveAuthor(author) {
   return {
     type: types.RECEIVE_AUTHOR,
     author
   }
 }
 
-export function loadAuthor() {
+function loadAuthor() {
   return {
     type: LOADING_STATUS
   }

@@ -9,45 +9,16 @@ import * as authorActions from '../../actions/author';
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
 
-test('#loadAuthor', t => {
-  const getState = {};
-  const expectedActions = {type: statusTypes.LOADING_STATUS};
-  const store = mockStore(getState);
-  t.deepEqual(store.dispatch(authorActions.loadAuthor()), expectedActions)
-});
-
-
 test('#fetchAuthor',async t => {
-  const receiveAuthorExpected = await booksLibrary.getAuthorById(1);
+  const authorId=1;
+  const receiveAuthorExpected = await booksLibrary.getAuthorById(authorId);
   const expectedActions = [
     {type: statusTypes.LOADING_STATUS},
     {type: types.RECEIVE_AUTHOR, author:receiveAuthorExpected}
   ];
 
   const store = mockStore({});
-
-
-
-  /*return store.dispatch(authorActions.fetchAuthor(1)).then(()=>{
-    console.log(store.getActions())
-  });*/
-
-  return store.dispatch(authorActions.fetchAuthor(1)).then((author)=>{
+  return store.dispatch(authorActions.fetchAuthor(authorId)).then(()=>{
     t.deepEqual(store.getActions(), expectedActions)
-    //  console.log(author);
-   // t.deepEqual(store.getActions(), expectedActions)
   });
-
-  /*return booksLibrary.getAuthorById(1).then((author)=> {
-    //const expectedActions = {type: types.RECEIVE_AUTHOR, author};
-    const expectedActions = [
-      {type: statusTypes.LOADING_STATUS},
-      {type: types.RECEIVE_AUTHOR, author}
-    ];
-    return store.dispatch(authorActions.fetchAuthor(1)).then(()=>{
-    //  console.log(store.getActions());
-      t.deepEqual(store.getActions(), expectedActions)
-    });
-
-  });*/
 });
