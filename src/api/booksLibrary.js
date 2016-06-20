@@ -5,11 +5,10 @@ let promise = result=>new Promise((resolve, reject)=> {
 });
 
 export default {
-  getAuthors(cb) {
-    setTimeout(() => cb(_authors), 1000)
+  getAuthors() {
+    return promise(_authors);
   },
   getAuthorById(id) {
-    //TODO not found
     let _author = _authors.filter(author=>author.id == id);
     return promise(_author[0]);
   }
