@@ -4,12 +4,12 @@ import thunk from 'redux-thunk';
 import booksLibrary from '../../api/booksLibrary.js';
 import * as statusTypes from '../../constants/status';
 import * as types from '../../constants/actionTypes';
-import * as authorActions from '../../actions/author';
+import * as authorAction from '../../actions/author';
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
 
-test('#fetchAuthor',async t => {
+test('fetchAuthor',async t => {
   const authorId=1;
   const receiveAuthorExpected = await booksLibrary.getAuthorById(authorId);
   const expectedActions = [
@@ -18,7 +18,7 @@ test('#fetchAuthor',async t => {
   ];
 
   const store = mockStore({});
-  return store.dispatch(authorActions.fetchAuthor(authorId)).then(()=>{
+  return store.dispatch(authorAction.fetchAuthor(authorId)).then(()=>{
     t.deepEqual(store.getActions(), expectedActions)
   });
 });
