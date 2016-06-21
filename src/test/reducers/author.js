@@ -1,8 +1,5 @@
 import test from 'ava';
-import booksLibrary from '../../api/booksLibrary.js';
-import * as statusTypes from '../../constants/status';
 import * as types from '../../constants/actionTypes';
-import * as authorActions from '../../actions/author';
 import * as reducer  from '../../reducers/author';
 
 test('returns the default author state', t => {
