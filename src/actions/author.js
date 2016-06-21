@@ -6,27 +6,21 @@ import * as types from '../constants/actionTypes';
 import booksLibrary from '../api/booksLibrary.js';
 
 function receiveAuthor(author) {
-    return {
-        type: types.RECEIVE_AUTHOR,
-        author
-    }
+  return {
+    type: types.RECEIVE_AUTHOR,
+    author
+  }
+}
+
+function loadAuthor() {
+  return {
+    type: LOADING_STATUS
+  }
 }
 
 export function fetchAuthor(id) {
-    return dispatch => {
-        dispatch({
-            type: LOADING_STATUS
-        });
-
-        booksLibrary.getAuthorById(id,author => {
-            dispatch(receiveAuthor(author))
-        })
-    }
+  return dispatch => {
+    dispatch(loadAuthor());
+    return booksLibrary.getAuthorById(id).then((author)=>dispatch(receiveAuthor(author)))
+  }
 }
-
-
-
-
-
-
-

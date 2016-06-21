@@ -1,13 +1,16 @@
 import _authors from './authors.json'
 
+let promise = result=>new Promise((resolve, reject)=> {
+  setTimeout(() => resolve(result), 1000);
+});
+
 export default {
-    getAuthors(cb) {
-        setTimeout(() => cb(_authors), 1000)
-    },
-    getAuthorById(id,cb) {
-        let _author=_authors.filter(author=>author.id==id);
-        //TODO not found
-        setTimeout(() => cb(_author[0]), 1000)
-    }
+  getAuthors() {
+    return promise(_authors);
+  },
+  getAuthorById(id) {
+    let _author = _authors.filter(author=>author.id == id);
+    return promise(_author[0]);
+  }
 }
 
