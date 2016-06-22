@@ -83,7 +83,7 @@ then  action `authors.fetchAuthors` interects with api and brings to reducer the
 `state` and finally `mapStateToProps` call the second time and voila props.list with data from api.      
 
 ## Test
-The main place for tests in redux is `reducers`.Don't change prev state,but clone it.
+npm test
 
 # Benefits of this file structure
 * Clear file structure
