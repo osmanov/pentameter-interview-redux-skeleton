@@ -9,7 +9,7 @@ I would like to demonstrate my `redux-app-skeleton` by example.
 >and why I choose this structure.
 
 # RESULT?
-[CHECK IT](http://osmanov.github.io)
+[CHECK IT](http://osmanov.github.io/pentameter.html)
 
 # HOW TO INSTALL
 1. npm i 
